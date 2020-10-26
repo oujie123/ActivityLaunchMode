@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gacrnd.gcs.activitylaunchmode">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity" android:taskAffinity="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".StandardAActivity" android:launchMode="standard"  android:taskAffinity=""/>
+        <activity android:name=".StandardBActivity" android:launchMode="standard"  android:taskAffinity=""/>
+        <activity android:name=".StandardCActivity" android:launchMode="standard" android:taskAffinity=".another" />
+
+        <activity android:name=".SingleTopAActivity" android:launchMode="singleTop"  android:taskAffinity=""/>
+        <activity android:name=".SingleTopBActivity" android:launchMode="singleTop"  android:taskAffinity=""/>
+        <activity android:name=".SingleTopCActivity" android:launchMode="singleTop" android:taskAffinity=".another" />
+
+        <activity android:name=".SingleTaskAActivity" android:launchMode="singleTask"  android:taskAffinity=""/>
+        <activity android:name=".SingleTaskBActivity" android:launchMode="singleTask"  android:taskAffinity=""/>
+        <activity android:name=".SingleTaskCActivity" android:launchMode="singleTask" android:taskAffinity=".another" />
+
+        <activity android:name=".SingleInstanceAActivity" android:launchMode="singleInstance"  android:taskAffinity=""/>
+        <activity android:name=".SingleInstanceBActivity" android:launchMode="singleInstance"  android:taskAffinity=""/>
+        <activity android:name=".SingleInstanceCActivity" android:launchMode="singleInstance" android:taskAffinity=".another" />
+
+
+        <activity android:name=".forwardresult.ForwardAActivity" android:label="forwardresult">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".forwardresult.ForwardBActivity"/>
+        <activity android:name=".forwardresult.ForwardCActivity"/>
+    </application>
+
+</manifest>
